@@ -1,0 +1,84 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\jun\Desktop\2019\TripBox\WebAPI\WebAPI.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Parameter\SearchParams.cs" />
+    <Compile Remove="Models\Table\BookingField.cs" />
+    <Compile Remove="Models\Table\Campaign.cs" />
+    <Compile Remove="Models\Table\CampaignProduct.cs" />
+    <Compile Remove="Models\Table\Category.cs" />
+    <Compile Remove="Models\Table\CategorySeoTag.cs" />
+    <Compile Remove="Models\Table\City.cs" />
+    <Compile Remove="Models\Table\Expense.cs" />
+    <Compile Remove="Models\Table\ExpenseItem.cs" />
+    <Compile Remove="Models\Table\Extra.cs" />
+    <Compile Remove="Models\Table\Field.cs" />
+    <Compile Remove="Models\Table\Image.cs" />
+    <Compile Remove="Models\Table\Invoice.cs" />
+    <Compile Remove="Models\Table\InvoiceItem.cs" />
+    <Compile Remove="Models\Table\Itinerary.cs" />
+    <Compile Remove="Models\Table\Order.cs" />
+    <Compile Remove="Models\Table\OrderField.cs" />
+    <Compile Remove="Models\Table\OrderItem.cs" />
+    <Compile Remove="Models\Table\OrderItemExtra.cs" />
+    <Compile Remove="Models\Table\OrderItemField.cs" />
+    <Compile Remove="Models\Table\OrderItemProduct.cs" />
+    <Compile Remove="Models\Table\OrderRole.cs" />
+    <Compile Remove="Models\Table\Party.cs" />
+    <Compile Remove="Models\Table\Payment.cs" />
+    <Compile Remove="Models\Table\PaymentOrder.cs" />
+    <Compile Remove="Models\Table\Pickup.cs" />
+    <Compile Remove="Models\Table\PickupSpot.cs" />
+    <Compile Remove="Models\Table\Price.cs" />
+    <Compile Remove="Models\Table\PriceOption.cs" />
+    <Compile Remove="Models\Table\Product.cs" />
+    <Compile Remove="Models\Table\ProductCategory.cs" />
+    <Compile Remove="Models\Table\ProductExtra.cs" />
+    <Compile Remove="Models\Table\ProductField.cs" />
+    <Compile Remove="Models\Table\ProductImage.cs" />
+    <Compile Remove="Models\Table\ProductRelated.cs" />
+    <Compile Remove="Models\Table\ProductTag.cs" />
+    <Compile Remove="Models\Table\ProductVideo.cs" />
+    <Compile Remove="Models\Table\SeoTag.cs" />
+    <Compile Remove="Models\Table\Session.cs" />
+    <Compile Remove="Models\Table\SessionOrdered.cs" />
+    <Compile Remove="Models\Table\SessionRole.cs" />
+    <Compile Remove="Models\Table\SessionTemplate.cs" />
+    <Compile Remove="Models\Table\SessionTemplateWeek.cs" />
+    <Compile Remove="Models\Table\Spot.cs" />
+    <Compile Remove="Models\Table\TagSpot.cs" />
+    <Compile Remove="Models\Table\Video.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.0.0-rc4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Parameter\" />
+    <Folder Include="Models\Table\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties efpt_1config_1json__JsonSchema="http://json-schema.org/draft-04/schema" /></VisualStudio></ProjectExtensions>
+
+</Project>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:WebAPI.Controllers.AvailController">
+            
+        </member>
+        <member name="M:WebAPI.Controllers.AvailController.Search(System.String)">
+            <summary>
+            Search Availability.
+            </summary>
+            <param name="id"></param> 
+        </member>
+    </members>
+</doc>
