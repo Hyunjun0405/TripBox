@@ -9,7 +9,7 @@ namespace WebAPI.Models
     {
         public PriceOption()
         {
-            Price = new HashSet<Price>();
+            Price = new HashSet<ProductPrice>();
         }
 
         public long idProduct { get; set; }
@@ -25,6 +25,6 @@ namespace WebAPI.Models
         [InverseProperty("PriceOption")]
         public virtual Product idProductNavigation { get; set; }
         [InverseProperty("PriceOption")]
-        public virtual ICollection<Price> Price { get; set; }
+        public virtual ICollection<ProductPrice> Price { get; set; }
     }
 }

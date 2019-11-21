@@ -4,14 +4,6 @@
         <name>WebAPI</name>
     </assembly>
     <members>
-        <member name="T:WebAPI.Controllers.AvailController">
-            
-        </member>
-        <member name="M:WebAPI.Controllers.AvailController.Search(System.String)">
-            <summary>
-            Search Availability.
-            </summary>
-            <param name="id"></param> 
-        </member>
+        <!-- Badly formed XML comment ignored for member "M:WebAPI.Controllers.AvailabilityController.checkAvailability(System.String,System.DateTime,System.DateTime,System.Nullable{System.Int32},System.Nullable{System.Int32})" -->
     </members>
 </doc>

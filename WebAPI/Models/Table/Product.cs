@@ -9,21 +9,21 @@ namespace WebAPI.Models
     {
         public Product()
         {
-            BookingField = new HashSet<BookingField>();
-            CampaignProduct = new HashSet<CampaignProduct>();
-            Itinerary = new HashSet<Itinerary>();
-            OrderItem = new HashSet<OrderItem>();
-            PriceOption = new HashSet<PriceOption>();
-            ProductCategory = new HashSet<ProductCategory>();
-            ProductExtra = new HashSet<ProductExtra>();
-            ProductField = new HashSet<ProductField>();
-            ProductImage = new HashSet<ProductImage>();
-            ProductRelatedidProduct1Navigation = new HashSet<ProductRelated>();
-            ProductRelatedidProduct2Navigation = new HashSet<ProductRelated>();
-            ProductTag = new HashSet<ProductTag>();
-            ProductVideo = new HashSet<ProductVideo>();
-            Session = new HashSet<Session>();
-            SessionTemplate = new HashSet<SessionTemplate>();
+            //BookingField = new HashSet<BookingField>();
+            //CampaignProduct = new HashSet<CampaignProduct>();
+            //Itinerary = new HashSet<Itinerary>();
+            //OrderItem = new HashSet<OrderItem>();
+            //PriceOption = new HashSet<PriceOption>();
+            //ProductCategory = new HashSet<ProductCategory>();
+            //ProductExtra = new HashSet<ProductExtra>();
+            //ProductField = new HashSet<ProductField>();
+            //ProductImage = new HashSet<ProductImage>();
+            //ProductRelatedidProduct1Navigation = new HashSet<ProductRelated>();
+            //ProductRelatedidProduct2Navigation = new HashSet<ProductRelated>();
+            //ProductTag = new HashSet<ProductTag>();
+            //ProductVideo = new HashSet<ProductVideo>();
+            //Session = new HashSet<Session>();
+            //SessionTemplate = new HashSet<SessionTemplate>();
         }
 
         public long id { get; set; }
@@ -80,38 +80,38 @@ namespace WebAPI.Models
         public long? idSpot { get; set; }
         public long? idPickup { get; set; }
 
-        [ForeignKey("idPickup")]
-        [InverseProperty("Product")]
-        public virtual Pickup idPickupNavigation { get; set; }
-        [InverseProperty("idProductNavigation")]
-        public virtual ICollection<BookingField> BookingField { get; set; }
-        [InverseProperty("idProductNavigation")]
-        public virtual ICollection<CampaignProduct> CampaignProduct { get; set; }
-        [InverseProperty("idProductNavigation")]
-        public virtual ICollection<Itinerary> Itinerary { get; set; }
-        [InverseProperty("idProductNavigation")]
-        public virtual ICollection<OrderItem> OrderItem { get; set; }
-        [InverseProperty("idProductNavigation")]
-        public virtual ICollection<PriceOption> PriceOption { get; set; }
-        [InverseProperty("idProductNavigation")]
-        public virtual ICollection<ProductCategory> ProductCategory { get; set; }
-        [InverseProperty("idProductNavigation")]
-        public virtual ICollection<ProductExtra> ProductExtra { get; set; }
-        [InverseProperty("idProductNavigation")]
-        public virtual ICollection<ProductField> ProductField { get; set; }
-        [InverseProperty("idProductNavigation")]
-        public virtual ICollection<ProductImage> ProductImage { get; set; }
-        [InverseProperty("idProduct1Navigation")]
-        public virtual ICollection<ProductRelated> ProductRelatedidProduct1Navigation { get; set; }
-        [InverseProperty("idProduct2Navigation")]
-        public virtual ICollection<ProductRelated> ProductRelatedidProduct2Navigation { get; set; }
-        [InverseProperty("idProductNavigation")]
-        public virtual ICollection<ProductTag> ProductTag { get; set; }
-        [InverseProperty("idProductNavigation")]
-        public virtual ICollection<ProductVideo> ProductVideo { get; set; }
-        [InverseProperty("idProductNavigation")]
-        public virtual ICollection<Session> Session { get; set; }
-        [InverseProperty("idProductNavigation")]
-        public virtual ICollection<SessionTemplate> SessionTemplate { get; set; }
+        //[ForeignKey("idPickup")]
+        //[InverseProperty("Product")]
+        //public virtual Pickup idPickupNavigation { get; set; }
+        //[InverseProperty("idProductNavigation")]
+        //public virtual ICollection<BookingField> BookingField { get; set; }
+        //[InverseProperty("idProductNavigation")]
+        //public virtual ICollection<CampaignProduct> CampaignProduct { get; set; }
+        //[InverseProperty("idProductNavigation")]
+        //public virtual ICollection<Itinerary> Itinerary { get; set; }
+        //[InverseProperty("idProductNavigation")]
+        //public virtual ICollection<OrderItem> OrderItem { get; set; }
+        //[InverseProperty("idProductNavigation")]
+        //public virtual ICollection<PriceOption> PriceOption { get; set; }
+        //[InverseProperty("idProductNavigation")]
+        //public virtual ICollection<ProductCategory> ProductCategory { get; set; }
+        //[InverseProperty("idProductNavigation")]
+        //public virtual ICollection<ProductExtra> ProductExtra { get; set; }
+        //[InverseProperty("idProductNavigation")]
+        //public virtual ICollection<ProductField> ProductField { get; set; }
+        //[InverseProperty("idProductNavigation")]
+        //public virtual ICollection<ProductImage> ProductImage { get; set; }
+        //[InverseProperty("idProduct1Navigation")]
+        //public virtual ICollection<ProductRelated> ProductRelatedidProduct1Navigation { get; set; }
+        //[InverseProperty("idProduct2Navigation")]
+        //public virtual ICollection<ProductRelated> ProductRelatedidProduct2Navigation { get; set; }
+        //[InverseProperty("idProductNavigation")]
+        //public virtual ICollection<ProductTag> ProductTag { get; set; }
+        //[InverseProperty("idProductNavigation")]
+        //public virtual ICollection<ProductVideo> ProductVideo { get; set; }
+        //[InverseProperty("idProductNavigation")]
+        //public virtual ICollection<Session> Session { get; set; }
+        //[InverseProperty("idProductNavigation")]
+        //public virtual ICollection<SessionTemplate> SessionTemplate { get; set; }
     }
 }

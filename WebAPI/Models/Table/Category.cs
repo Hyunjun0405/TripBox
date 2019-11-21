@@ -9,9 +9,9 @@ namespace WebAPI.Models
     {
         public Category()
         {
-            CampaignProduct = new HashSet<CampaignProduct>();
-            CategorySeoTag = new HashSet<CategorySeoTag>();
-            ProductCategory = new HashSet<ProductCategory>();
+            //CampaignProduct = new HashSet<CampaignProduct>();
+            //CategorySeoTag = new HashSet<CategorySeoTag>();
+            //ProductCategory = new HashSet<ProductCategory>();
         }
 
         public long id { get; set; }
@@ -22,11 +22,11 @@ namespace WebAPI.Models
         public string description { get; set; }
         public bool? isVisible { get; set; }
 
-        [InverseProperty("idCategoryNavigation")]
-        public virtual ICollection<CampaignProduct> CampaignProduct { get; set; }
-        [InverseProperty("idCategoryNavigation")]
-        public virtual ICollection<CategorySeoTag> CategorySeoTag { get; set; }
-        [InverseProperty("idCategoryNavigation")]
-        public virtual ICollection<ProductCategory> ProductCategory { get; set; }
+        //[InverseProperty("idCategoryNavigation")]
+        //public virtual ICollection<CampaignProduct> CampaignProduct { get; set; }
+        //[InverseProperty("idCategoryNavigation")]
+        //public virtual ICollection<CategorySeoTag> CategorySeoTag { get; set; }
+        //[InverseProperty("idCategoryNavigation")]
+        //public virtual ICollection<ProductCategory> ProductCategory { get; set; }
     }
 }

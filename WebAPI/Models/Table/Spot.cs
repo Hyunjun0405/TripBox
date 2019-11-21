@@ -9,8 +9,8 @@ namespace WebAPI.Models
     {
         public Spot()
         {
-            PickupSpot = new HashSet<PickupSpot>();
-            TagSpot = new HashSet<TagSpot>();
+            //PickupSpot = new HashSet<PickupSpot>();
+            //TagSpot = new HashSet<TagSpot>();
         }
 
         public long id { get; set; }
@@ -33,9 +33,9 @@ namespace WebAPI.Models
         [ForeignKey("idCity")]
         [InverseProperty("Spot")]
         public virtual City idCityNavigation { get; set; }
-        [InverseProperty("idSpotNavigation")]
-        public virtual ICollection<PickupSpot> PickupSpot { get; set; }
-        [InverseProperty("idSpotNavigation")]
-        public virtual ICollection<TagSpot> TagSpot { get; set; }
+        //[InverseProperty("idSpotNavigation")]
+        //public virtual ICollection<PickupSpot> PickupSpot { get; set; }
+        //[InverseProperty("idSpotNavigation")]
+        //public virtual ICollection<TagSpot> TagSpot { get; set; }
     }
 }

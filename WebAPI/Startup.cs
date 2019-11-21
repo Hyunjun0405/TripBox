@@ -41,14 +41,14 @@ namespace WebAPI
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "TripBpx API",
+                    Title = "TripBox API",
                     Description = "A simple example ASP.NET Core Web API",
                     TermsOfService = new Uri("https://example.com/terms"),
                     Contact = new OpenApiContact
                     {
-                        Name = "Shayne Boyer",
-                        Email = string.Empty,
-                        Url = new Uri("https://twitter.com/spboyer"),
+                        Name = "jun",
+                        Email = "jun@modetour.com",
+                        Url = new Uri("https://TripBox.co.kr/contactus"),
                     },
                     License = new OpenApiLicense
                     {
@@ -56,14 +56,14 @@ namespace WebAPI
                         Url = new Uri("https://example.com/license"),
                     }
                 });
-
+                //c.OperationFilter<SwaggerParameterAttributeFilter>();                
                 c.EnableAnnotations();
 
                 // Set the comments path for the Swagger JSON and UI.
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
-                //c.SchemaFilter<SearchParamsSchemaFilter>();
+                
             });
         }
 
@@ -82,7 +82,7 @@ namespace WebAPI
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("../swagger/v1/swagger.json", "My API V1");
                 c.RoutePrefix = string.Empty;
             });            
 

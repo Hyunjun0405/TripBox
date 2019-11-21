@@ -5,11 +5,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebAPI.Models
 {
-    public partial class Price
+    public partial class ProductPrice
     {
-        public Price()
+        public ProductPrice()
         {
-            OrderItemProduct = new HashSet<OrderItemProduct>();
+            //OrderItemProduct = new HashSet<OrderItemProduct>();
         }
 
         public long id { get; set; }
@@ -24,12 +24,12 @@ namespace WebAPI.Models
         public short? seatMax { get; set; }
 
         [ForeignKey("idProduct,typePriceOption")]
-        [InverseProperty("Price")]
+        [InverseProperty("PriceOption")]
         public virtual PriceOption PriceOption { get; set; }
-        [ForeignKey("idSession")]
-        [InverseProperty("Price")]
-        public virtual Session idSessionNavigation { get; set; }
-        [InverseProperty("idPriceNavigation")]
-        public virtual ICollection<OrderItemProduct> OrderItemProduct { get; set; }
+        //[ForeignKey("idSession")]
+        //[InverseProperty("ProductPrice")]
+        //public virtual Session idSessionNavigation { get; set; }
+        //[InverseProperty("idPriceNavigation")]
+        //public virtual ICollection<OrderItemProduct> OrderItemProduct { get; set; }
     }
 }

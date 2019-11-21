@@ -3,29 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Any;
-using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Annotations;
-using Swashbuckle.AspNetCore.SwaggerGen;
 using WebAPI.Models;
+using WebAPI.Models.Response;
 
 namespace WebAPI.Controllers
 {
-   
-    /// 
     [Route("/[controller]")]
     [ApiController]
+   
 
-    public class AvailController : ControllerBase
-    {       
-        
-       
-        /// <summary>
-        /// Search Availability.
-        /// </summary>
-        /// <param name="id"></param> 
+    public class CategoryController : ControllerBase
+    {
+        private readonly TripboxDbContext _context;
+        public CategoryController(TripboxDbContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet]
         [Produces("application/json", "application/xml")]
         [SwaggerOperation(
@@ -34,13 +29,27 @@ namespace WebAPI.Controllers
             OperationId = "checkAvailability",
             Tags = new[] { "Purchase", "Products" }
         )]
-        public ActionResult<ResponseSessionList> Search([FromQuery]string SearchParams)
+        public ResonseCategoryList Search()
         {
-            return null;
+            ResonseCategoryList rs = new ResonseCategoryList();
+            try
+            {                
+                rs.Categories = _context._Category.ToList();
+                rs.requestStatus.success = true;
+                return rs;
+            }
+            catch (Exception ex)
+            {
+                var set = new SetStatus();
+                set.Set(rs.requestStatus, ex);                
+                return rs;
+            }
+
         }
 
-        
+        //private void SetStatus(RequstStatus requestStatus, Exception ex)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
-
-    
 }

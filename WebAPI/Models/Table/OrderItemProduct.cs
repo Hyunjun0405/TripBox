@@ -20,6 +20,6 @@ namespace WebAPI.Models
         public virtual OrderItem idOrderItemNavigation { get; set; }
         [ForeignKey("idPrice")]
         [InverseProperty("OrderItemProduct")]
-        public virtual Price idPriceNavigation { get; set; }
+        public virtual ProductPrice idPriceNavigation { get; set; }
     }
 }
